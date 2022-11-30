@@ -17,7 +17,9 @@ function HomePage() {
       <div className={styles.companyInfoOuter}>
         <div className={styles.companyInfoBox}>
           <div className={styles.companyInfo}>
-            Company information(eg. Reasons for choosing this company)
+            <h1>Welcome to ARCLAB.space</h1>
+            <h1>DORRINGTON ATCHESON ARCHITECTS</h1>
+            <h3>Company information(eg. Reasons for choosing this company)</h3>
           </div>
           <div className={styles.joinBtnBox}>
             <Button className={styles.joinBtn} onClick={() => { setOpenModal(true) }}>Join us now</Button>
@@ -31,14 +33,13 @@ function HomePage() {
       <div className={styles.exampleVideoBox}>
         <div className={styles.exampleVideo}>
           An example video of deliverables
+
         </div>
       </div>
 
       {/* Footer */}
       <div className={styles.footerBox}>
-        <div>
           Footer
-        </div>
       </div>
 
       {

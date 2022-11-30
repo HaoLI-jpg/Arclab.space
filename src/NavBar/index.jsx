@@ -11,12 +11,12 @@ export default function NavBar() {
   return (
     <div className={styles.navBarBox}>
       <Row>
-        <Col span={4}>
+        <Col span={1}>
           <div className={styles.circleLogo}>
             <img src="https://media-exp1.licdn.com/dms/image/C560BAQE5iwUWPs6fFQ/company-logo_200_200/0/1556248126796?e=1677715200&v=beta&t=PTwDzm1Q7IvVjJyTnXcOOFULThRN4l6rR8X3-jxVjMw" alt="Arclab Logo" className={styles.logo} />
           </div>
         </Col>
-        <Col span={17}></Col>
+        <Col span={20}></Col>
         <Col span={2}>
           <div className={styles.aboutBtnBox}>
             <Button className={styles.aboutBtn}>About</Button>
