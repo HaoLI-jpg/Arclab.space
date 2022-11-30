@@ -2,106 +2,63 @@
 .homeBackground {
   width: 100%;
   height: 100%;
-  background-color: #E5E5E5;
-
-  .navBarBox{
-    width: 100%;
-    height: 7%;
-    background-color: #797979;
-  }
+  background-color: black;
 }
-
-/* Navbar */
-.circleLogo{
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  position: relative;
-  left: 20px;
-  top:5px;
-  box-shadow: 1px 1px 5px black; 
-  .logo{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
-}
-
-.aboutIconBox{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  .aboutIconButton{
-    background: transparent;
-    border:none;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  .aboutIconButton:hover{
-    color: #E5E5E5 !important;
-  }
-}
-
-.userIconBox{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  .userIconButton{
-    background: transparent;
-    border:none;
-    font-size: 35px;
-  }
-  .userIconButton:hover{
-    color: #E5E5E5 !important;
-  }
-}
-
 
 // Body
 // Company Info
-.companyInfoBox{
+.companyInfoOuter {
   width: 100%;
   height: 43%;
-  background-color: #A39F9F;
   text-align: center;
-  .companyInfo{
-    width: 100%;
-    height: 70%;
-  }
-  .joinBtnBox{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .joinBtn{
-      width: 15%;
-      height: 45%;
-      font-size: 25px;
-      font-weight: bold;
-      background-color: #4A4B4B;
-      border-color: #4A4B4B;
+  display: flex;
+  justify-content: center;
+
+  .companyInfoBox {
+    width: 80%;
+    height: 100%;
+    background-color: rgba($color: #FFFFFF, $alpha: 0.5);
+    border-radius: 50px;
+
+    .companyInfo {
+      width: 100%;
+      height: 70%;
     }
-    .joinBtn:hover{
-      border-color: #BCB9B9 !important;
-      background-color: #BCB9B9 !important;
-      color: white;
+
+    .joinBtnBox {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .joinBtn {
+        width: 15%;
+        height: 45%;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: #4A4B4B;
+        border-color: #4A4B4B;
+      }
+
+      .joinBtn:hover {
+        border-color: #BCB9B9 !important;
+        background-color: #BCB9B9 !important;
+        color: white;
+      }
     }
   }
 }
 
 // An example video of deliverables
-.exampleVideoBox{
+.exampleVideoBox {
   width: 100%;
   height: 42%;
   display: flex;
   align-items: center;
   justify-content: center;
-  .exampleVideo{
+
+  .exampleVideo {
     width: 60%;
     height: 100%;
     background-color: #D9D9D9;
@@ -109,9 +66,8 @@
 }
 
 // Footer
-.footerBox{
+.footerBox {
   width: 100%;
   height: 8%;
-  background-color: #A39F9F;
+  background-color: rgba($color: #FFFFFF, $alpha: 0.5);
 }
-

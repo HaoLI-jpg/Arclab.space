@@ -1,7 +1,6 @@
 import styles from './App.scss';
 import HomePage from './HomePage';
-import UserLogin from './UserLogin';
-import UserRegister from './UserRegister';
+import UserSignInAndSignUp from './UserSignInAndSignUp';
 import { ProductPage } from './ProductPage';
 import {
   BrowserRouter,
@@ -14,8 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="login" element={<UserLogin />} />
-        <Route path="register" element={<UserRegister />} />
+        <Route path="login" element={<UserSignInAndSignUp />} />
         <Route path="page" element={<ProductPage />} />
       </Routes>
     </BrowserRouter>
