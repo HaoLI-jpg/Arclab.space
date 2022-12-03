@@ -1,43 +1,95 @@
 // background
 .homeBackground {
+  padding: 0px;
+  margin: 0px;
   width: 100%;
   height: 100%;
   background-color: black;
+  background-image: url('https://lh3.googleusercontent.com/p/AF1QipM5mciYDIbLMTotvCrpCF0z0U-9vzCooDr088Kt=s1360-w1360-h1020');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom right;
+  overflow: hidden;
 }
 
 // Body
 // Company Info
 .companyInfoOuter {
-  width: 100%;
-  height: 43%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
+  width: 65%;
+  height: 83%;
+  position: relative;
+  top: 450px;
+  left: 800px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, .3);
+  box-sizing: border-box;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, .5);
+  border-radius: 15px;
 
-  .companyInfoBox {
+  .companyInfo {
     width: 80%;
-    height: 100%;
-    background-color: rgba($color: #FFFFFF, $alpha: 0.5);
-    border-radius: 50px;
+    color: #E4E4E4;
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    .companyInfo {
-      width: 100%;
-      height: 70%;
+    .welcomeTitleText {
+      font-size: 50px;
+      text-align: center;
     }
 
+    .platformName {
+      font-size: 70px;
+      font-weight: bold;
+    }
+
+    .welcomeBodyText {
+      padding: 30px 8px 10px 8px;
+      line-height: 50px;
+    }
+  }
+
+  // Footer
+  .footerBox {
+    // width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 100px;
+
+    .clientInfo {
+      width: 30%;
+      height: 80%;
+      color: #E4E4E4;
+      background-color: rgba(0, 0, 0, .3);
+      font-size: 20px;
+      position: relative;
+      left: 150px;
+      text-align: center;
+      padding: 10px 0px;
+      border-radius: 5%;
+    }
+
+    // Join us Btn
     .joinBtnBox {
-      width: 100%;
-      height: 30%;
+      width: 40%;
+      height: 65%;
+      position: relative;
+      top: 30px;
+      left: 180px;
       display: flex;
       align-items: center;
       justify-content: center;
 
       .joinBtn {
-        width: 15%;
-        height: 45%;
-        font-size: 25px;
+        width: 60%;
+        height: 40%;
+        font-size: 30px;
         font-weight: bold;
-        background-color: #4A4B4B;
+        background-color: rgba(0, 0, 0, .3);
         border-color: #4A4B4B;
       }
 
@@ -50,28 +102,80 @@
   }
 }
 
-// An example video of deliverables
-.exampleVideoBox {
-  width: 100%;
-  height: 42%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  .exampleVideo {
-    width: 60%;
-    height: 100%;
-    background-color: #D9D9D9;
-    font-size: 50px;
-    text-align: center;
-  }
+//An example video of deliverables
+// .videoHoverBox{
+//   margin: 0px;
+//   padding: 0px;
+//   position: relative;
+//   bottom: 570px;
+//   right: -58%;
+//   width: 42%;
+//   height: 50%;
+//   background-color: rgba(255, 255, 255, .3);
+//   .videoHover{
+//     width: 15%;
+//     height: 10%;
+//     background-color: red;
+//   }
+//   .exampleVideoBox{
+//     width: 85%;
+//     height: 100%;
+//     background-color: green;
+//     float: right;
+//   }
+// }
+@mixin vertical-align($position) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-// Footer
-.footerBox {
-  width: 100%;
-  height: 8%;
-  background-color: rgba($color: #FFFFFF, $alpha: 0.5);
-  text-align: center;
-  font-size: 50px;
+@mixin all-transition($time) {
+  transition: all $time;
+  -webkit-transition: all $time;
+}
+
+.videoHoverBox {
+  background-color: rgba(255, 255, 255, .3);
+  font-weight: 20px;
+  width: 40%;
+  height: 50%;
+  padding-left: 80px;
+  position: relative;
+  bottom: 560px;
+  right: -2100px;
+  // -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  // box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  // right: -130px;
+  @include all-transition(0.3s);
+  color: #222;
+
+  &:hover,
+  &:focus {
+    transform: translate3d(-860px, 0, 0);
+    animation-timing-function: 1s ease-in;
+  }
+  .title {
+    width:60%;
+    height: 10%;
+    top:50%;
+    @include vertical-align(absolute);
+    transform: rotate(270deg);
+    position: relative;
+    left: -300px;
+    top:250px;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .exampleVideoBox {
+    @include vertical-align(absolute);
+    width: 88%;
+    height: 90%;
+    margin-left: 20px;
+  }
 }
