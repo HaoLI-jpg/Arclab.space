@@ -1,11 +1,11 @@
 import React from 'react'
 import NavBar from '../NavBar'
 import Collapsible from 'react-collapsible';
-import styles from './style.module.scss'
-import { PageInfo } from '../Components/PageInfo'
+import styles from './style.module.scss';
+import { PageInfo } from '../Components/PageInfo';
 
 export const ProductPage = () => {
-  return (
+    return (
         <div className={styles.gridContainer}>
             <NavBar />
 
@@ -20,5 +20,5 @@ export const ProductPage = () => {
                 </p>
             </Collapsible>
         </div>
-  )
+    )
 }

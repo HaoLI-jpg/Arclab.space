@@ -150,7 +150,9 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
                       </Form.Item>
                       <div className={styles.signUpBtnBox}>
                         <Form.Item>
-                          <Button className={styles.signUpBtn} type="primary" htmlType="submit" >
+                          <Button className={styles.signUpBtn} type="primary" htmlType="submit" onClick={()=>{
+                            setPage('login')
+                          }}>
                             Sign up
                           </Button>
                         </Form.Item>
