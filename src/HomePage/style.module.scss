@@ -58,7 +58,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 100px;
+    top: 75px;
 
     .clientInfo {
       width: 30%;
@@ -103,28 +103,6 @@
 }
 
 
-//An example video of deliverables
-// .videoHoverBox{
-//   margin: 0px;
-//   padding: 0px;
-//   position: relative;
-//   bottom: 570px;
-//   right: -58%;
-//   width: 42%;
-//   height: 50%;
-//   background-color: rgba(255, 255, 255, .3);
-//   .videoHover{
-//     width: 15%;
-//     height: 10%;
-//     background-color: red;
-//   }
-//   .exampleVideoBox{
-//     width: 85%;
-//     height: 100%;
-//     background-color: green;
-//     float: right;
-//   }
-// }
 @mixin vertical-align($position) {
   position: $position;
   top: 50%;
@@ -147,9 +125,6 @@
   position: relative;
   bottom: 560px;
   right: -2100px;
-  // -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  // box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  // right: -130px;
   @include all-transition(0.3s);
   color: #222;
 
