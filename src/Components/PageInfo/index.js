@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './style.module.scss'
 
 export const PageInfo = () => {
 
@@ -11,31 +12,26 @@ export const PageInfo = () => {
     }
 
   return (
-    <div>
-        <div>
+    <div className={styles.container}>
+        <div className={styles.text}>
             <span>PROJECTS: </span>
-            <span>{info.project}</span>
-            <br />
+            <span className={styles.innerText}>{info.project}</span>
         </div>
-        <div>
+        <div className={styles.text}>
             <span>CLIENT: </span>
-            <span>{info.client}</span>
-            <br />
+            <span className={styles.innerText}>{info.client}</span>
         </div>
-        <div>
+        <div className={styles.text}>
             <span>STATUS: </span>
-            <span>{info.status}</span>
-            <br />
+            <span className={styles.innerText}>{info.status}</span>
         </div>
-        <div>
+        <div className={styles.text}>
             <span>SURVEY DATE: </span>
-            <span>{info.survey_date}</span>
-            <br />
+            <span className={styles.innerText}>{info.survey_date}</span>
         </div>
-        <div>
+        <div className={styles.text}>
             <span>ISSUE DATE: </span>
-            <span>{info.issue_date}</span>
-            <br />
+            <span className={styles.innerText}>{info.issue_date}</span>
         </div>
         
     </div>

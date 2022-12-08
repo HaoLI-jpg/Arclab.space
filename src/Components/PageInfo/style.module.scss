@@ -1,0 +1,16 @@
+.container {
+    margin-bottom: 5%;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin: 0.5rem 0;
+}
+
+.innerText {
+    background-color: white;
+    color: black;
+    align-self:flex-end;
+}
