@@ -5,7 +5,7 @@ import styles from './style.module.scss'
 import { PageInfo } from '../Components/PageInfo';
 import { PointCloudDisplay } from '../Components/PointCloudDisplay';
 
-export const ProductPage = () => {
+const ProductPage = () => {
     return (
         <>
         <NavBar />
@@ -47,5 +47,6 @@ export const ProductPage = () => {
         </div>
         </>
     )
->>>>>>> main
 }
+
+export default ProductPage;
