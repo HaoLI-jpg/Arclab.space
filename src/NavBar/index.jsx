@@ -19,7 +19,8 @@ export default function NavBar() {
         <Col span={20}></Col>
         <Col span={2}>
           <div className={styles.aboutBtnBox}>
-            <Button className={styles.aboutBtn}>About</Button>
+            {/* <Button className={styles.aboutBtn}>About</Button> */}
+            <a className={styles.aboutBtn} href="https://arcdigital.nz/">About</a>
           </div>
         </Col>
         <Col span={1}>
