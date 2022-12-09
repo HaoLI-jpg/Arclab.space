@@ -3,7 +3,8 @@ import styles from './style.module.scss';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import {
-  CloseOutlined
+  CloseOutlined,
+  MailOutlined
 } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 
@@ -19,15 +20,16 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
   return (
     <div className={styles.shadow}>
       <div className={styles.userLoginDialog}>
+        <Button
+          className={styles.closeBtn}
+          onClick={() => {
+            setOpenModal(false)
+          }}
+        ><CloseOutlined /></Button>
         <div className={styles.imageBox}>
-          <Button
-            className={styles.closeBtn}
-            onClick={() => {
-              setOpenModal(false)
-            }}
-          ><CloseOutlined /></Button>
         </div>
         <div className={styles.userLoginBox}>
+
           <div className={styles.userLogin}>
             {
               page === 'login' && (
@@ -76,7 +78,9 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
                           <Checkbox className={styles.rememberMe}>Remember me</Checkbox>
                         </Form.Item>
 
-                        <a className={styles.forgotPwdLink} href=''>
+                        <a className={styles.forgotPwdLink} onClick={() => {
+                          setPage('forgotPwd')
+                        }}>
                           Forgot password
                         </a>
                       </Form.Item>
@@ -124,6 +128,18 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
                         <Input className={styles.usernameInput} prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
                       </Form.Item>
                       <Form.Item
+                        name="email"
+                        rules={[
+                          {
+                            required: true,
+                            message: 'Please input your email address!',
+                          },
+                        ]}
+                      >
+                        <Input className={styles.registerEmailInput} prefix={<MailOutlined className="site-form-item-icon" />} placeholder="Email address" />
+                      </Form.Item>
+
+                      <Form.Item
                         name="password"
                         rules={[
                           {
@@ -143,13 +159,64 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
                       </Form.Item>
                       <div className={styles.signUpBtnBox}>
                         <Form.Item>
-                          <Button className={styles.signUpBtn} type="primary" htmlType="submit" >
+                          <Button className={styles.signUpBtn} type="primary" htmlType="submit" onClick={()=>{
+                            setPage('login')
+                          }}>
                             Sign up
                           </Button>
                         </Form.Item>
                       </div>
 
                     </Form>
+                  </div>
+                </div>
+              )
+            }
+            {
+              page === 'forgotPwd' && (
+                <div>
+                  <div className={styles.textBox}>
+                    <h1>Forgot your password?</h1>
+                    <p>Reset your new password via email address</p>
+                  </div>
+                  <div className={styles.userDetails}>
+                    <Form.Item
+                      name="email"
+                      rules={[
+                        {
+                          required: true,
+                          message: 'Please input your email address!',
+                        },
+                      ]}
+                    >
+                      <Input className={styles.forgotPwdEmailInput} prefix={<MailOutlined className="site-form-item-icon" />} placeholder="Email address" />
+                    </Form.Item>
+
+                    <Form.Item
+                      name="newPassword"
+                      rules={[
+                        {
+                          required: true,
+                          message: 'Please input your new password!',
+                        },
+                      ]}
+                    >
+                      <Input className={styles.forgotpwdInput}
+                        prefix={<LockOutlined className="site-form-item-icon" />}
+                        type="password"
+                        placeholder="New password"
+                      />
+                    </Form.Item>
+
+                    <div className={styles.signUpBtnBox}>
+                      <Form.Item>
+                        <Button onClick={()=>{
+                          setPage('login')
+                        }} className={styles.sentBtn} type="primary" htmlType="submit" >
+                          Sent
+                        </Button>
+                      </Form.Item>
+                    </div>
                   </div>
                 </div>
               )
