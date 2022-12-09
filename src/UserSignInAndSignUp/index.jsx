@@ -6,9 +6,17 @@ import {
   CloseOutlined,
   MailOutlined
 } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }) {
   const [page, setPage] = useState(pageType);
+  const navigate = useNavigate()
+
+  const onFinish = (values) => {
+    navigate('/welcome', {
+      state: values
+    })
+  }
   return (
     <div className={styles.shadow}>
       <div className={styles.userLoginDialog}>
@@ -37,6 +45,7 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
                       initialValues={{
                         remember: true,
                       }}
+                      onFinish={onFinish}
                     >
                       <Form.Item
                         name="username"
