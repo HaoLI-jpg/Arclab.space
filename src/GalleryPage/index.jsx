@@ -24,9 +24,11 @@ export default function Welcome() {
       {/* NavBar */}
       <NavBar />
       <div className={styles.welcome_bk}>
-        <div style={{ fontSize: '40px' }}>Welcome.</div>
-        <h1>{username} ARCHITECT</h1>
-        <button style={{ backgroundColor: 'black', border: 'none' }} onClick={goGallery}><img src='assets/downArrow.png' alt="downArrow" /></button>
+        <div  style={{ fontSize: '300%' }}>
+          <h1>Welcome.</h1>
+          <h1>{username} ARCHITECT</h1>
+          <button style={{ backgroundColor: 'black', border: 'none' }} onClick={goGallery}><img src='assets/downArrow.png' alt="downArrow" /></button>
+        </div>
       </div>
     </div>
   )
