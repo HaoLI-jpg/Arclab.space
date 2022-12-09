@@ -5,9 +5,17 @@ import { Button, Checkbox, Form, Input } from 'antd';
 import {
   CloseOutlined
 } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }) {
   const [page, setPage] = useState(pageType);
+  const navigate = useNavigate()
+
+  const onFinish = (values) => {
+    navigate('/welcome', {
+      state: values
+    })
+  }
   return (
     <div className={styles.shadow}>
       <div className={styles.userLoginDialog}>
@@ -35,6 +43,7 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
                       initialValues={{
                         remember: true,
                       }}
+                      onFinish={onFinish}
                     >
                       <Form.Item
                         name="username"
@@ -70,8 +79,8 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
                         <a className={styles.forgotPwdLink} href=''>
                           Forgot password
                         </a>
-                        </Form.Item>
-                        <Form.Item>
+                      </Form.Item>
+                      <Form.Item>
                         <a className={styles.registerLink} onClick={() => {
                           setPage('register')
                         }}>Register now</a>
@@ -130,7 +139,7 @@ export default function UserSignInAndSignUp({ setOpenModal, pageType = 'login' }
                         />
                       </Form.Item>
                       <Form.Item>
-                        <a className={styles.loginLink} onClick={()=>{setPage('login')}}>Login Here</a>
+                        <a className={styles.loginLink} onClick={() => { setPage('login') }}>Login Here</a>
                       </Form.Item>
                       <div className={styles.signUpBtnBox}>
                         <Form.Item>
