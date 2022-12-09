@@ -24,7 +24,7 @@ export default function Gallery() {
                                 <img alt="example" className={styles.thumbnails} src={thumbnailsPath[eachPath]} />
                             </Link>
                         </div>
-                        <Tabs items={items} style={{ color: 'white' }} />
+                        <Tabs items={items} style={{ color: 'white', fontSize:'150%'}} />
                     </div>
                 </Col>
             );
@@ -44,7 +44,7 @@ export default function Gallery() {
                 <br />
                 <div>
                     <br />
-                    <Row gutter={[64, 32]}>
+                    <Row gutter={[32, 32]}>
                         {colCreator()}
                     </Row>
                 </div>
