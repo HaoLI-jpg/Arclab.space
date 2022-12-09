@@ -1,55 +1,65 @@
 /* Navbar */
-.navBarBox{
+.navBarBox {
   width: 100%;
   height: 7%;
   background-color: #403F3F;
 }
 
-.circleLogo{
+.circleLogo {
   width: 65px;
   height: 65px;
   border-radius: 50%;
   position: relative;
   left: 20px;
-  top:5px;
-  box-shadow: 1px 1px 5px black; 
-  .logo{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
+  top: 5px;
+  box-shadow: 1px 1px 5px black;
+  overflow: hidden;
 }
 
-.aboutBtnBox{
+.goHomeBtn {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  right: 18px;
+  bottom: 5px;
+  border-radius: 50%;
+
+}
+
+.aboutBtnBox {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  .aboutBtn{
+
+  .aboutBtn {
     font-size: 35px;
     font-weight: bold;
     color: #E5E5E5;
     margin-top: 25px;
   }
-  .aboutBtn:hover{
+
+  .aboutBtn:hover {
     color: #A3A3A3 !important;
   }
 }
 
-.userIconBox{
+.userIconBox {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  .userIconBtn{
+
+  .userIconBtn {
     background: transparent;
-    border:none;
+    border: none;
     font-size: 35px;
     color: #E5E5E5;
   }
-  .userIconBtn:hover{
+
+  .userIconBtn:hover {
     color: #A3A3A3 !important;
   }
 }

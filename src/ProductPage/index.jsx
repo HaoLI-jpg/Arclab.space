@@ -4,24 +4,22 @@ import Collapsible from 'react-collapsible';
 import styles from './style.module.scss'
 import { PageInfo } from '../Components/PageInfo';
 import { PointCloudDisplay } from '../Components/PointCloudDisplay';
-import { useNavigate } from 'react-router-dom'
-import { Button } from 'antd';
 
 const ProductPage = () => {
-    const navigate = useNavigate()
+
     return (
         <>
 
             <NavBar />
             <div className={styles.container}>
                 <PageInfo />
-                <Button className={styles.backToHome}
+                {/* <Button className={styles.backToHome}
                     onClick={() => {
                         navigate('/')
                     }}
                 >
                     Back
-                </Button>
+                </Button> */}
 
                 <h4>
                     <Collapsible trigger="+ POINT CLOUD" className={styles.collapsible}>
